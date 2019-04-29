@@ -1,0 +1,96 @@
+.Header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 75px;
+    padding: 20px 40px;
+    background: #fff;
+    .logo {
+        float: left;
+        white-space: nowrap;
+        width: 165px;
+        .icon-camera {
+            width: 34px;
+            float: left;
+            margin-right: 10px;
+        }
+        .name {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        p {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 1.1;
+        }
+    }
+
+    .search-area {
+        background: #f5f6f7;
+        display: inline-block;
+        margin-left: 50px;
+        padding: 6px;
+        width: 500px;
+        margin-top: -5px;
+        -webkit-border-radius: 28px;
+        -moz-border-radius: 28px;
+        border-radius: 28px;
+        .input-group {
+            width: 100%;
+            display: flex;
+            label {
+                width: 40px;
+                display: flex;
+                justify-content: center;
+                .icon-search {
+                    width: 20px;
+                    svg {
+                        fill : #aaa
+                    }
+                }
+            }
+            .form-control {
+                width: 100%;
+                border: none;
+                padding: 4px 8px;
+            }
+        }
+        .btn-search {
+            color: #aaa;
+            width: 100px;
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            padding-top: 5px;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+            -webkit-transition:  .3s;
+            -moz-transition:  .3s;
+            -ms-transition:  .3s;
+            -o-transition:  .3s;
+            transition:  .3s;
+            &:hover {
+                color: #555;
+                border-color: #666;
+            }
+        }
+    }
+
+    .gnb {
+        float: right;
+        ul {
+            .nav-item {
+                float: left;
+                .nav-link {
+                    display: block;
+                    padding: 10px 20px;
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    color: #333;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
