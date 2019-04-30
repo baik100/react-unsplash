@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 function SearchResult (props) {
 
   console.log("@@@@@ props", props);
-  
+
   const {
     searchResult = []
   } = props.state;
@@ -15,8 +15,8 @@ function SearchResult (props) {
             {
               searchResult.map((item) => <img src={item.urls.regular} alt=""/>)
             }
-
           </div>
+    
       )
 }
 
