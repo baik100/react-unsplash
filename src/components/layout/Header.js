@@ -73,6 +73,7 @@ function Header(props) {
 
                 <div className="Submit-photo">
                     Submit a photo
+                    
                 </div>
 
             </header>
