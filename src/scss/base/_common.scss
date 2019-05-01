@@ -49,3 +49,8 @@ body,html,#root{height:100%;}
   -ms-user-select: none;
   user-select: none;
 }
+
+.form-control {
+  border: transparent;
+  background: transparent;
+}

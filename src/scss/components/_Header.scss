@@ -76,12 +76,6 @@
             }
         }
     }
-    .popup {
-        float: right;
-        padding: 6px 20px;
-        font-weight: bold;
-        cursor: pointer;
-    }
 
     .gnb {
         float: right;
@@ -95,8 +89,20 @@
                     font-weight: 500;
                     color: #333;
                     font-size: 17px;
+                    .icon-Explore {
+                        .svg {
+                            width: 32px;
+                        }
+                    }
                 }
             }
         }
+    }
+
+    .Submit-photo {
+        float: right;
+        padding: 6px 20px;
+        font-weight: bold;
+        cursor: pointer;
     }
 }

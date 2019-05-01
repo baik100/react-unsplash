@@ -1,17 +1,17 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from "react-router-dom";
-import {IconCamera, IconSearch} from "../../icons/Icons";
+import {IconCamera, IconSearch, IconHome, IconExplore} from "../../icons/Icons";
 import Actions from "../../redux/action";
 import {connect} from "react-redux";
 import Sidebar from "../Sidebar";
-import Popup from "../Popup";
+import DropdownBlack from "../DropdownBlack";
 
 function Header(props) {
     const {dispatch} = props;
 
     const {
-        isSidebarOpen,
-        isPopupOpen
+        isDropdownOpen,
+        isSidebarOpen
     } = props.state;
 
     // const {hasSearchBar, handleSearchBar} = useSearchBar(true);
@@ -21,17 +21,16 @@ function Header(props) {
         <>
             <header className="Header">
                 <h1 className="logo roboto">
-                    <Link to="/">
-                        <IconCamera/>
-                        <div className="name">AwesomeShot</div>
-                        <p>Photos for everyone</p>
+                    <Link to="../pages/main">
+                        <IconHome/>
                     </Link>
                 </h1>
 
-                <div className="menu"
-                     onClick={() => dispatch(Actions.Creators.updateState({isSidebarOpen: !isSidebarOpen}))}>
-                    menu
-                </div>
+                {/*<div className="menu"*/}
+                     {/*onClick={() => dispatch(Actions.Creators.updateState({isSidebarOpen: !isSidebarOpen}))}>*/}
+                    {/*menu*/}
+                {/*</div>*/}
+
                 {
                     // hasSearchBar &&
                     <form
@@ -43,7 +42,7 @@ function Header(props) {
                     >
                         <div className="input-group">
                             <label>
-                                <IconSearch/>
+                                <button className="btn"><IconSearch/></button>
                             </label>
                             <input
                                 className="form-control"
@@ -53,7 +52,7 @@ function Header(props) {
                                 placeholder="Search free high-resolution photos"
                             />
                         </div>
-                        <button>검색</button>
+
                     </form>
                 }
 
@@ -61,27 +60,25 @@ function Header(props) {
                 <nav className="gnb">
                     <ul>
                         <li className="nav-item">
-                            <Link to="" className="nav-link">collections</Link>
+                            <Link to="" className="nav-link">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="" className="nav-link">Explore</Link>
+                            <Link to="" className="nav-link">collections</Link>
+                        </li>
+                        <li className="nav-item" onClick={() => dispatch(Actions.Creators.updateState({isDropdownOpen: !isDropdownOpen}))}>
+                            <Link to="" className="nav-link"><IconExplore/></Link>
                         </li>
                     </ul>
                 </nav>
 
-                <div className="popup"
-                     onClick={() => dispatch(Actions.Creators.updateState({isPopupOpen: !isPopupOpen}))}>
-                    . . .
+                <div className="Submit-photo">
+                    Submit a photo
                 </div>
+
             </header>
             {
-                isPopupOpen &&
-                <Popup/>
-            }
-
-            {
-                isSidebarOpen &&
-                <Sidebar/>
+                isDropdownOpen &&
+                 <DropdownBlack/>
             }
         </>
     );
