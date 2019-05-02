@@ -1,0 +1,17 @@
+//Main
+
+.Main {
+  position: relative;
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1555999009-72ff7c97d167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&dpr=1&auto=format&fit=crop&w=5999&h=594&q=80 1x, https://images.unsplash.com/photo-1555999009-72ff7c97d167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&dpr=2&auto=format&fit=crop&w=5999&h=594&q=80 2x, https://images.unsplash.com/photo-1555999009-72ff7c97d167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&dpr=3&auto=format&fit=crop&w=5999&h=594&q=80 3x, https://images.unsplash.com/photo-1555999009-72ff7c97d167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&dpr=4&auto=format&fit=crop&w=5999&h=594&q=80')50% 0/ cover no-repeat;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3);
+  }
+}

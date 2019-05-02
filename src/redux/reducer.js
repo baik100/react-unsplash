@@ -3,7 +3,8 @@ import Actions from "./action";
 const initialState = {
     isAuth: false,
     isSidebarOpen: false,
-    isDropdownOpen: false
+    isDropExporeOpen: false,
+    isDropNotificationOpen: false
 };
 
 export default (state = initialState, action) => {
