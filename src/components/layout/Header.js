@@ -115,6 +115,7 @@ function Header(props) {
                     </ul>
                 </div>
             </header>
+            
             {isDropExporeOpen && <DropExpore/>}
             {isDropNotificationOpen && <DropNotification/>}
         </>
