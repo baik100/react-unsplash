@@ -17,6 +17,14 @@ export default (state = initialState, action) => {
             }
         }
 
+        case Actions.Types.FETCH_PHOTO: {
+            return {
+                ...state,
+                ...action.props
+            }
+        }
+
+
         default:
             return state;
     }

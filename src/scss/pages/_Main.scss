@@ -1,8 +1,10 @@
 //Main
 
-.Main {
-  position: relative;
+.main-bg {
+  position: absolute;
+  width: 100%;
   height: 90vh;
+  z-index: -2;
   background: url('https://images.unsplash.com/photo-1555999009-72ff7c97d167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&dpr=1&auto=format&fit=crop&w=5999&h=594&q=80 1x, https://images.unsplash.com/photo-1555999009-72ff7c97d167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&dpr=2&auto=format&fit=crop&w=5999&h=594&q=80 2x, https://images.unsplash.com/photo-1555999009-72ff7c97d167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&dpr=3&auto=format&fit=crop&w=5999&h=594&q=80 3x, https://images.unsplash.com/photo-1555999009-72ff7c97d167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&dpr=4&auto=format&fit=crop&w=5999&h=594&q=80')50% 0/ cover no-repeat;
   &:after {
     content: '';
@@ -11,7 +13,65 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: -1;
     background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.Main {
+  position: relative;
+  .visual {
+    width: 780px;
+    margin: 144px auto 152px;
+    .visual-text {
+      margin-bottom: 16px;
+      h3 {
+        font-size: 46px;
+        font-weight: bold;
+        margin-bottom: 16px;
+        color: #fff;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.3;
+        color: #fff;
+      }
+    }
+    .visual-search {
+      position: relative;
+      margin-bottom: 16px;
+      .input-group {
+        background: #fff;
+        height: 54px;
+        line-height: 54px;
+        padding-left: 48px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        .visual-search-icon {
+          position: absolute;
+          top: 6px;
+          left: 16px;
+          z-index: 10;
+          .icon-search {
+            svg {
+              width: 20px;
+              fill: #999;
+            }
+          }
+        }
+        .visual-search-input {
+          position: absolute;
+          z-index: 10;
+          width: 100%;
+          height: 54px;
+          line-height: 54px;
+        }
+      }
+    }
+    .visual-search-text {
+      font-size: 15px;
+      color: #fff;
+    }
   }
 }
