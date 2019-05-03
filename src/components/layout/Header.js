@@ -75,47 +75,89 @@ function Header(props) {
                                     <Link to="" className="nav-link"><IconExplore/></Link>
                                 </li>
                             </ul>
-                            <div className="submit-photo">
-                                Submit a photo
-                            </div>
-
-                            <div className="notification"
-                                 onClick={() => dispatch(Actions.Creators.updateState({isDropNotificationOpen: !isDropNotificationOpen}))}>
-                                <IconNotification/>
-                            </div>
-
-                            <div className="collections">
-                                <img
-                                    src="https://images.unsplash.com/placeholder-avatars/extra-large.jpg?dpr=1&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff"
-                                    alt=""/>
-                            </div>
                         </nav>
+                        <div className="submit-photo">
+                            Submit a photo
+                        </div>
+
+                        <div className="notification"
+                             onClick={() => dispatch(Actions.Creators.updateState({isDropNotificationOpen: !isDropNotificationOpen}))}>
+                            <IconNotification/>
+                        </div>
+
+                        <div className="collections">
+                            <img
+                                src="https://images.unsplash.com/placeholder-avatars/extra-large.jpg?dpr=1&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff"
+                                alt=""/>
+                        </div>
                     </div>
                 </div>
                 <div className="main-header">
-                    <ul>
-                        <li className="main-header-link">Editorial</li>
-                        <li className="main-header-link">Following</li>
-                        <li className="main-header-link">Wallpapers</li>
-                        <li className="main-header-link">Textures & Patterns</li>
-                        <li className="main-header-link">Nature</li>
-                        <li className="main-header-link">Current Events</li>
-                        <li className="main-header-link">Architecture</li>
-                        <li className="main-header-link">Business & Work</li>
-                        <li className="main-header-link">Film</li>
-                        <li className="main-header-link">Animals</li>
-                        <li className="main-header-link">Travel</li>
-                        <li className="main-header-link">Fashion</li>
-                        <li className="main-header-link">Food & Drink</li>
-                        <li className="main-header-link">Spirituality</li>
-                        <li className="main-header-link">Experimental</li>
-                        <li className="main-header-link">People</li>
-                        <li className="main-header-link">Health</li>
-                        <li className="main-header-link">Arts & Culture</li>
-                    </ul>
+                    <div className="primary-head">
+                        <ul>
+                            <li className="main-header-item">
+                                <Link to = "#!" class="header-link on">Editorial</Link>
+                                </li>
+                            <li className="main-header-item">
+                                <Link to = "#!" class="header-link">Following</Link>
+                                </li>
+                        </ul>
+                    </div>
+                    <div className="secondary-head">
+                        <ul>
+                            <li className="main-header-item">
+                                <Link to = "#!" class="header-link">Wallpapers</Link>
+                                </li>
+                            <li className="main-header-item">
+                                <Link to = "#!" class="header-link">Textures & Patterns</Link>
+                                </li>
+                            <li className="main-header-item">
+                                <Link to = "#!" class="header-link">Nature</Link>
+                                </li>
+                            <li className="main-header-item">
+                                <Link to = "#!" class="header-link">Current Events</Link>
+                                </li>
+                            <li className="main-header-item">
+                                <Link to = "#!" class="header-link">Architecture</Link>
+                                </li>
+                            <li className="main-header-item">
+                                <Link to = "#!" class="header-link">Business & Work</Link>
+                                </li>
+                            <li className="main-header-item">
+                                <Link to = "#!" class="header-link">Film</Link>
+                                </li>
+                            <li className="main-header-item">
+                                <Link to = "#!" class="header-link">Animals</Link>
+                                </li>
+                            <li className="main-header-item">
+                                <Link to = "#!" class="header-link">Travel</Link>
+                                </li>
+                            <li className="main-header-item">
+                                <Link to = "#!" class="header-link">Fashion</Link>
+                                </li>
+                            <li className="main-header-item">
+                                <Link to = "#!" class="header-link">Food & Drink</Link>
+                                </li>
+                            <li className="main-header-item">
+                                <Link to = "#!" class="header-link">Spirituality</Link>
+                                </li>
+                            <li className="main-header-item">
+                                <Link to = "#!" class="header-link">Experimental</Link>
+                                </li>
+                            <li className="main-header-item">
+                                <Link to = "#!" class="header-link">People</Link>
+                                </li>
+                            <li className="main-header-item">
+                                <Link to = "#!" class="header-link">Health</Link>
+                                </li>
+                            <li className="main-header-item">
+                                <Link to = "#!" class="header-link">Arts & Culture</Link>
+                                </li>
+                        </ul>
+                    </div>
                 </div>
             </header>
-            
+
             {isDropExporeOpen && <DropExpore/>}
             {isDropNotificationOpen && <DropNotification/>}
         </>
