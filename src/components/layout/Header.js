@@ -5,6 +5,8 @@ import Actions from "../../redux/action";
 import {connect} from "react-redux";
 import DropExpore from "../DropExplore";
 import DropNotification from "../DropNotification";
+import HISTORY, {navigate} from "../../helpers/HistoryHelper";
+import classnames from "classnames";
 
 //import Sidebar from "../Sidebar";
 
@@ -42,7 +44,8 @@ function Header(props) {
                                 className="search-area"
                                 onSubmit={(e) => {
                                     e.preventDefault();
-                                    dispatch(Actions.Creators.fetchSearch(value))
+                                    //dispatch(Actions.Creators.fetchSearch(value))
+                                    navigate(`/search/photos/${value}`);
                                 }}
                             >
                                 <div className="input-group">
@@ -65,10 +68,10 @@ function Header(props) {
                         <nav className="gnb">
                             <ul>
                                 <li className="nav-item">
-                                    <Link to="" className="nav-link">Home</Link>
+                                    <Link to="../pages/main" className="nav-link">Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="" className="nav-link">collections</Link>
+                                    <Link to="../pages/collections" className="nav-link">collections</Link>
                                 </li>
                                 <li className="nav-item"
                                     onClick={() => dispatch(Actions.Creators.updateState({isDropExporeOpen: !isDropExporeOpen}))}>
@@ -96,63 +99,86 @@ function Header(props) {
                     <div className="primary-head">
                         <ul>
                             <li className="main-header-item">
-                                <Link to = "#!" class="header-link on">Editorial</Link>
-                                </li>
+                                <a className={classnames("header-link", {isActive: isCurrentPath("/search/photos/Editorial")})}
+                                   onClick={() => navigate("/search/photos/Editorial")}>Editorial</a>
+                            </li>
                             <li className="main-header-item">
-                                <Link to = "#!" class="header-link">Following</Link>
-                                </li>
+                                <a className={classnames("header-link", {isActive: isCurrentPath("/search/photos/Following")})}
+                                   onClick={() => navigate("/search/photos/Following")}>Following</a>
+                            </li>
                         </ul>
                     </div>
                     <div className="secondary-head">
                         <ul>
                             <li className="main-header-item">
-                                <Link to = "#!" class="header-link">Wallpapers</Link>
-                                </li>
+                                <a className={classnames("header-link", {isActive: isCurrentPath("/search/photos/Wallpapers")})}
+                                   onClick={() => navigate("/search/photos/Wallpapers")}>Wallpapers</a>
+                            </li>
                             <li className="main-header-item">
-                                <Link to = "#!" class="header-link">Textures & Patterns</Link>
-                                </li>
+                                <a className={classnames("header-link", {isActive: isCurrentPath("/search/photos/Textures & Patterns")})}
+                                   onClick={() => navigate("/search/photos/Textures & Patterns")}>Textures
+                                    & Patterns</a>
+                            </li>
                             <li className="main-header-item">
-                                <Link to = "#!" class="header-link">Nature</Link>
-                                </li>
+                                <a className={classnames("header-link", {isActive: isCurrentPath("/search/photos/Nature")})}
+                                   onClick={() => navigate("/search/photos/Nature")}>Nature</a>
+                            </li>
                             <li className="main-header-item">
-                                <Link to = "#!" class="header-link">Current Events</Link>
-                                </li>
+                                <a className={classnames("header-link", {isActive: isCurrentPath("/search/photos/Current Events")})}
+                                   onClick={() => navigate("/search/photos/Current Events")}>Current
+                                    Events</a>
+                            </li>
                             <li className="main-header-item">
-                                <Link to = "#!" class="header-link">Architecture</Link>
-                                </li>
+                                <a className={classnames("header-link", {isActive: isCurrentPath("/search/photos/Architecture")})}
+                                   onClick={() => navigate("/search/photos/Architecture")}>Architecture</a>
+                            </li>
                             <li className="main-header-item">
-                                <Link to = "#!" class="header-link">Business & Work</Link>
-                                </li>
+                                <a className={classnames("header-link", {isActive: isCurrentPath("/search/photos/Business & Work")})}
+                                   onClick={() => navigate("/search/photos/Business & Work")}>Business
+                                    & Work</a>
+                            </li>
                             <li className="main-header-item">
-                                <Link to = "#!" class="header-link">Film</Link>
-                                </li>
+                                <a className={classnames("header-link", {isActive: isCurrentPath("/search/photos/Film")})}
+                                   onClick={() => navigate("/search/photos/Film")}>Film</a>
+                            </li>
                             <li className="main-header-item">
-                                <Link to = "#!" class="header-link">Animals</Link>
-                                </li>
+                                <a className={classnames("header-link", {isActive: isCurrentPath("/search/photos/Animals")})}
+                                   onClick={() => navigate("/search/photos/Animals")}>Animals</a>
+                            </li>
                             <li className="main-header-item">
-                                <Link to = "#!" class="header-link">Travel</Link>
-                                </li>
+                                <a className={classnames("header-link", {isActive: isCurrentPath("/search/photos/Travel")})}
+                                   onClick={() => navigate("/search/photos/Travel")}>Travel</a>
+                            </li>
                             <li className="main-header-item">
-                                <Link to = "#!" class="header-link">Fashion</Link>
-                                </li>
+                                <a className={classnames("header-link", {isActive: isCurrentPath("/search/photos/Fashion")})}
+                                   onClick={() => navigate("/search/photos/Fashion")}>Fashion</a>
+                            </li>
                             <li className="main-header-item">
-                                <Link to = "#!" class="header-link">Food & Drink</Link>
-                                </li>
+                                <a className={classnames("header-link", {isActive: isCurrentPath("/search/photos/Food & Drink")})}
+                                   onClick={() => navigate("/search/photos/Food & Drink")}>Food &
+                                    Drink</a>
+                            </li>
                             <li className="main-header-item">
-                                <Link to = "#!" class="header-link">Spirituality</Link>
-                                </li>
+                                <a className={classnames("header-link", {isActive: isCurrentPath("/search/photos/Spirituality")})}
+                                   onClick={() => navigate("/search/photos/Spirituality")}>Spirituality</a>
+                            </li>
                             <li className="main-header-item">
-                                <Link to = "#!" class="header-link">Experimental</Link>
-                                </li>
+                                <a className={classnames("header-link", {isActive: isCurrentPath("/search/photos/Experimental")})}
+                                   onClick={() => navigate("/search/photos/Experimental")}>Experimental</a>
+                            </li>
                             <li className="main-header-item">
-                                <Link to = "#!" class="header-link">People</Link>
-                                </li>
+                                <a className={classnames("header-link", {isActive: isCurrentPath("/search/photos/People")})}
+                                   onClick={() => navigate("/search/photos/People")}>People</a>
+                            </li>
                             <li className="main-header-item">
-                                <Link to = "#!" class="header-link">Health</Link>
-                                </li>
+                                <a className={classnames("header-link", {isActive: isCurrentPath("/search/photos/Health")})}
+                                   onClick={() => navigate("/search/photos/Health")}>Health</a>
+                            </li>
                             <li className="main-header-item">
-                                <Link to = "#!" class="header-link">Arts & Culture</Link>
-                                </li>
+                                <a className={classnames("header-link", {isActive: isCurrentPath("/search/photos/Arts & Culture")})}
+                                   onClick={() => navigate("/search/photos/Arts & Culture")}>Arts
+                                    & Culture</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -162,6 +188,10 @@ function Header(props) {
             {isDropNotificationOpen && <DropNotification/>}
         </>
     );
+
+    function isCurrentPath(pathname) {
+        return HISTORY.location.pathname === pathname;
+    }
 
 
     function useSearchBar(initialState) {
