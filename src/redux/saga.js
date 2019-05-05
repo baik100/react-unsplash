@@ -10,10 +10,8 @@ export default function* () {
     })
 
     yield takeLatest(Action.Types.FETCH_PHOTO, function* () {
-        const foo = yield call(api.getPhoto);
-        console.log('@@foo', foo);
-
-        yield put(Action.Creators.updateState({photos : foo}))
+        const mainPhotos = yield call(api.getPhoto);
+        yield put(Action.Creators.updateState({mainPhotos}))
 
 
     })

@@ -181,7 +181,7 @@
                         font-size: 14px;
                         color: #999;
                         border: 2px solid transparent;
-                        &.on {
+                        &.isActive {
                             color: #000;
                             position: relative;
                             &:before {
@@ -212,7 +212,7 @@
                     .header-link {
                         font-size: 14px;
                         color: #999;border: 2px solid transparent;
-                        &.on {
+                        &.isActive {
                             color: #000;
                             position: relative;
                             &:before {

@@ -2,10 +2,9 @@ import axios from 'axios';
 import {UNSPLASH_API_KEY, UNSPLASH_API_URL} from './helpers/ConstsHelper';
 
 const api = {
-  getPhoto: async (photo) => {
+  getPhoto: () => {
     return axios.get(`https://api.unsplash.com/photos/?client_id=${UNSPLASH_API_KEY}`)
       .then(res => {
-        console.log("@@@@@ data", res.data);
         return res.data;
       })
       .catch(function (error) {
