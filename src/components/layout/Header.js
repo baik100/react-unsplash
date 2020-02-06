@@ -68,10 +68,10 @@ function Header(props) {
                         <nav className="gnb">
                             <ul>
                                 <li className="nav-item">
-                                    <Link to="../pages/main" className="nav-link">Home</Link>
+                                    <Link to="./Home" className="nav-link">Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="../pages/collections" className="nav-link">collections</Link>
+                                    <Link to="./collections" className="nav-link">collections</Link>
                                 </li>
                                 <li className="nav-item"
                                     onClick={() => dispatch(Actions.Creators.updateState({isDropExporeOpen: !isDropExporeOpen}))}>
